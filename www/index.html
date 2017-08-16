@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">-->
+<title>Box lunch San Diego print menu</title>
+
+
+<link href="css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="theCart"></div>
+<div id="checkOut" onClick="menuAPI.processOrder()">No items</div>
+
+
+<header>
+<h1>Box Lunch San Diego</h1>
+<dfn>Prices subject to change.</dfn>
+</header>
+
+
+<wrap>
+<createAccount>
+
+<h2>Create Account</h2>
+
+<label>First name:</label>
+<input type="text" id="firstName" placeholder="first name">
+<label>Last name:</label>
+<input type="text" id="lastName" placeholder="last nanme">
+
+
+
+
+<label>Company:</label>
+<div class="boxb">
+<select>
+<option value="company A">Company A</option>
+<option value="company B">Company B</option>
+<option value="company C">Company C</option>
+</select>
+</div>
+<label>Email:</label>
+<input type="email" id="emailR" placeholder="your email">
+<label>Phone number:</label>
+<input type="number" id="phoneNumber" placeholder="6191234567">
+<label>Extension:</label>
+<input type="number" id="extR" placeholder="extension to office">
+<label>Password:</label>
+<input type="password" id="passwordR">
+<label>Retype password:</label>
+<input type="password" id="passwordR2">
+<input type="submit" value="Register">
+
+</createAccount>
+
+<div id="logMeOut" class="logMeOut" onclick="menuAPI.logOut()">log Out</div>
+
+<div id="logiN">
+<login>
+<h2>Log In</h2>
+<label>Email:</label>
+<input id="email" type="email" placeholder="you@youremail.com">
+<label>Password:</label>
+<input id="password" type="password">
+<input name="" onClick="menuAPI.LogMeIn();" type="submit" value="Log In">
+</login>
+</div>
+</wrap>
+<div id="screenSize">ghfghfhg</div>
+<ul id="menu1" class="custom-counter">
+</ul>
+
+</body>
+
+</html>
+
+<script language="javascript" type="text/javascript" src="cordova.js"></script>
+<script language="javascript" type="text/jscript" src="menu_functions.js"></script>
+<script src="http://appdesignclub.com/assets/js/jm.js"></script>
+<script language="javascript" type="text/javascript">
+	
+	var current = 0;
+	var MenuItemsBaby = [];
+
+
+//document.addEventListener("deviceready", testit, false);
+	
+	
+	//function testit(){
+	menu.theRequest();
+	menuAPI.toggleInOut();
+	setTimeout("menuAPI.setEvents()", 2000);
+	document.addEventListener("scroll", menuAPI.showCheckOutMenu, false);
+	
+		//}
+	
+alert("ok there yeassssss");
+</script>
+
