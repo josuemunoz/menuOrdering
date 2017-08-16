@@ -69,25 +69,25 @@ var i = 0;
 		 
 	 setEvents: function(){
 		 
-		 var li = menuAPI.byId("menu1");
+		 var menu1 = menuAPI.byId("menu1");
 		 //li.addEventListener("click", function(){
 			 //alert("setevents()");
 			 //alert("hello");
-			 
+			 var f = document.getElementsByClassName("additem");
 			 //})
-		 li.addEventListener("click", menuAPI.addMenuItem, false);
+		 menu1.addEventListener("click", menuAPI.addMenuItem, false);
 		 
 		  
 		 },
 		 
 	 addMenuItem: function(event){
-		 //alert(event);
-		//alert(event.target.parentNode.firstChild.innerHTML);
+		 //alert("hi");
+		//alert(event.target.className);
 
 		 
 		// if(event.target.id == "additem"){
 			  //if(menuAPI.byId(event.target.id).title){
-				   if(event.target.className == "additem"){
+				   if(event.target.className === "additem"){
 		 
 		 var n = prompt("Number Of Items", 1);
 		 if(n){
@@ -277,7 +277,7 @@ var menu = {
 				x.onreadystatechange = function(){
 					if(x.readyState == 4 && x.status == 200){
 						var r = JSON.parse(x.responseText);
-	alert('c');
+	//alert('c');
 						menu.displayMenu(r);	
 					
 					}

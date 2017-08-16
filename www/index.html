@@ -16,7 +16,6 @@
 <div id="theCart"></div>
 <div id="checkOut" onClick="menuAPI.processOrder()">No items</div>
 
-
 <header>
 <h1>Box Lunch San Diego</h1>
 <dfn>Prices subject to change.</dfn>
@@ -83,22 +82,22 @@
 <script language="javascript" type="text/jscript" src="menu_functions.js"></script>
 <script src="http://appdesignclub.com/assets/js/jm.js"></script>
 <script language="javascript" type="text/javascript">
+
+
 	
 	var current = 0;
 	var MenuItemsBaby = [];
-
-
 //document.addEventListener("deviceready", testit, false);
 	
 	
 	//function testit(){
 	menu.theRequest();
 	menuAPI.toggleInOut();
-	setTimeout("menuAPI.setEvents()", 2000);
-	document.addEventListener("scroll", menuAPI.showCheckOutMenu, false);
 	
+	document.addEventListener("scroll", menuAPI.showCheckOutMenu, false);
+	menuAPI.setEvents()
 		//}
 	
-alert("ok there yeassssss");
+//alert("ok there yeassssss");
 </script>
 
