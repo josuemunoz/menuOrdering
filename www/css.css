@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body{ background-color:white; margin:0px; margin-top:20px; padding:0px;}
+body{ background-color:#FFF; margin:0px; margin-top:40px; padding:0px;}
 .dropList{width: 448px;
 background: #F00;
 padding: 0px;
@@ -12,7 +12,7 @@ height: auto;}
 .niceList{ background-color:none; width:98%; float:left; padding:1%}
 
 
-wrap{ padding:20px; float:left; height:auto;}
+wrap{ width:60%; padding:4%; margin:20%; border-radius:10px; float:left; height:auto; background-color:#CCC;}
 ul, li{ padding:0px; margin:0px;}
 
 #menu1{ width:80%; height:auto; float:left; display:block; background-color:#0F0;}
@@ -44,7 +44,7 @@ text-align: center;}
 	height: 50px;
 	position: fixed; z-index:5;
 	right: 0px;
-	top: 10px; background-position:4px 10px;
+	top: 20px; background-position:4px 10px;
 }
 .testing{ color:green; position:absolute; top:2px; left:65%; background-color:#FFF; border-radius:8px; font-size:9px; padding:2px !important;}
 #theCart img{ width:50px !important; height:50px !important; float:left;}
@@ -61,10 +61,7 @@ padding: 2%;
 
 .ItEm{ color:red;}
 
-
-
-
-login,  createAccount{ width:92%; height:auto; background-color:#CCC; box-shadow: 5px 5px 30px #999 inset; padding:4%; display:block; margin:10px auto; border-radius:10px;}
+login,  createAccount{ width:80%; padding:5%; height:auto; box-shadow: 5px 5px 30px #999 inset; display:block; border-radius:10px;}
 login createAccount, h2{ text-align:center; padding:0px; margin:0px;}
 login label, createAccount label{ font-family:Verdana, Geneva, sans-serif; font-size:10px; padding:5px 0; display:block;}
 login createAccount, input{ width:90%; display:block; padding:5%; border:0; border-radius:10px; background-color:#FFF; font-family:Verdana, Geneva, sans-serif;}
@@ -104,26 +101,22 @@ font-family: arial; cursor:pointer;
 
 @media only screen and (min-width: 320px) {
 
-body{ background-color:#FF0;}
+body {}
+wrap{ width:90%; margin:5%; padding:0;}
 h1{ text-align:center; font-size:1.5em; text-shadow:1px 1px 2px #FFF;}		
-login createAccount{ width:auto; height:auto; float:left; padding:50px;}
-#menu1{ width:92%; margin:4% auto;}
+login, createAccount{ width:80%; margin:5%; height:auto; float:left;}
+#menu1{ width:92%; margin:4%;}
 ul#menu1 > li > span:first-child{ width:48%; font-size:1.2em;}
 
 #checkOut{ background:#CCC;}
-#menu1 wrap{ margin: 0px;}
-wrap{ display:block; width:92%; height:auto; float:left; background:linear-gradient(#ccc, #999, #ccc); border-radius:10px;}
 
 .box{ width:44%; background-position: right center !important;}
-
 #screenSize{ background-color:#FFF; color:#F00; position:fixed; top:20px; left:0px;}
 }
 
 @media only screen and (min-width: 360px) {
 
-
-
-body{ background-color:#0F6;}
+body{}
 		
 login createAccount{ width:auto; height:auto; float:left; padding:50px;}
 #menu1{ width:92%; margin:4%;}
@@ -131,7 +124,7 @@ ul#menu1 > li > span:first-child{ width:55%; padding:0px; font-size:1.5em;}
 
 #checkOut{ background:#CCC; height:auto;}
 
-wrap{ display:block; padding:4%; width:92%; height:auto; float:left; background:linear-gradient(#ccc, #999, #ccc); border-radius:10px;}
+wrap{ display:block; padding:0%; width:90%; margin:5%; height:auto; float:left; background:linear-gradient(#ccc, #999, #ccc); border-radius:10px;}
 
 .box{ width:44%; background-position: right center !important;}
 
@@ -141,14 +134,14 @@ wrap{ display:block; padding:4%; width:92%; height:auto; float:left; background:
 
 @media only screen and (min-width: 480px) {
 	
-	body{ background:#0F0;}
+	body{}
 	#menu1{ width:56%; margin:2%;}
 	
 	}
 	
 @media only screen and (min-width: 768px) {
 	
-	body{ background-color:orange;}
+	body{}
 	h1{ font-size:4em;}
 	login, createAccount{ width:auto; padding:10px;}
 	#menu1, wrap{ margin:20px;}
@@ -158,20 +151,23 @@ wrap{ display:block; padding:4%; width:92%; height:auto; float:left; background:
 
 
 @media only screen and (min-width: 1024px) {
-body{ background-color:#FFF;}
+body{}
 ul#menu1 > li > span:first-child{ width:65%; font-size:1.5em;}
 	
-login,  createAccount{ width:auto; float:left; padding:20px;}
-#menu1{ width:50%;}
+header{ margin:0px;}
+h1{ padding:20px; margin:0; padding:20px;}
+login,  createAccount{ width:auto;}
+#menu1{ width:70%;}
 
-#menu1, wrap{ margin: 20px;}
-wrap{ width:20%; background:linear-gradient(#ccc, #999, #ccc); border-radius:10px; padding:20px;}
+#menu1, wrap{ margin:20px;}
+wrap{ width:auto;background:linear-gradient(#ccc, #999, #ccc); border-radius:10px; padding:20px;}
 
 
 
 }
 @media only screen and (min-width: 1920px) {
-	wrap{ width:auto; padding:20px;}
+	body{}
+	wrap{ padding:20px;}
 	#menu1, wrap{ margin: 20px;}
 	login, createAccount{ width:auto;}
 	

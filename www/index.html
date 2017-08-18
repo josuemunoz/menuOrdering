@@ -23,7 +23,7 @@
 
 
 <wrap>
-<createAccount>
+<createAccount id="createAccount">
 
 <h2>Create Account</h2>
 
@@ -38,22 +38,24 @@
 <label>Company:</label>
 <div class="boxb">
 <select>
-<option value="company A">Company A</option>
-<option value="company B">Company B</option>
-<option value="company C">Company C</option>
+<option value="1">Company A</option>
+<option value="2">Company B</option>
+<option value="3">Company C</option>
 </select>
 </div>
 <label>Email:</label>
 <input type="email" id="emailR" placeholder="your email">
 <label>Phone number:</label>
 <input type="number" id="phoneNumber" placeholder="6191234567">
+<!--
 <label>Extension:</label>
 <input type="number" id="extR" placeholder="extension to office">
+-->
 <label>Password:</label>
 <input type="password" id="passwordR">
 <label>Retype password:</label>
 <input type="password" id="passwordR2">
-<input type="submit" value="Register">
+<input type="submit" value="Register" onClick="menuAPI.createAccount();">
 
 </createAccount>
 

@@ -21,6 +21,74 @@ var i = 0;
 		
 		},
 	 
+	 selectTheOption: function(place){
+		 
+		 return menuAPI.byId(place).getElementsByTagName("select");
+		
+		 
+		 },
+		 
+		clearTheForm: function(){
+			
+			var input = document.getElementsByTagName("input");
+			
+			
+				for( x in input){
+					
+					menuAPI.byId(input[x].id).value= "";
+					//console.log("......"+input[x].value);
+					
+					}
+			
+			
+			},
+	 
+	  createAccount: function(){
+		 
+		 		
+				var input = menuAPI.returnInputs("createAccount");
+				var selectBox = this.selectTheOption("createAccount");
+				
+		 		formdata = new FormData();
+				formdata.append("module", "createAccountMenu");
+		 		formdata.append("company", selectBox[0].value);
+		 for(var i=0; i<input.length; i++){
+					
+					console.log(input[i].id);
+					if(input[i].value != ""){
+					formdata.append(input[i].id, input[i].value);
+					
+					}
+					}
+					//alert(JSON.parse(formdata));
+					
+		 		var x = "";
+		 		x = new XMLHttpRequest();
+				
+				x.open("POST", "http://appdesignclub.com/api/jm.php", true);
+				//x.setRequestHeader("Content-type", "application/x-www-formAsh-urlencoded");
+				x.onreadystatechange = function(){
+					if(x.readyState == 4 && x.status == 200){
+						var r ="";
+							r = JSON.parse(x.responseText);
+							//r = x.responseText;
+						alert(r.status);
+						
+						if(r.error == 0){
+						
+							menuAPI.clearTheForm();	
+						
+						}
+						
+					
+					}
+				}
+				
+				x.send(formdata);
+		 
+		 
+		 },
+	 
 	 LogMeIn: function(){
 		 
 		 		
