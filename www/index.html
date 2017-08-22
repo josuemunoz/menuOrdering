@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-<!-- <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">-->
+<!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+ <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">-->
 <title>Box lunch San Diego print menu</title>
 
 
@@ -31,10 +31,6 @@
 <input type="text" id="firstName" placeholder="first name">
 <label>Last name:</label>
 <input type="text" id="lastName" placeholder="last nanme">
-
-
-
-
 <label>Company:</label>
 <div class="boxb">
 <select>
@@ -82,13 +78,19 @@
 
 <script language="javascript" type="text/javascript" src="cordova.js"></script>
 <script language="javascript" type="text/jscript" src="menu_functions.js"></script>
-<script src="http://appdesignclub.com/assets/js/jm.js"></script>
+<!-- <script src="http://appdesignclub.com/assets/js/jm.js"></script> -->
 <script language="javascript" type="text/javascript">
 
 
 	
+	var theMenu = "";
 	var current = 0;
+	var totalCost = 0;
+	var cartCount = 0;
+	var itemsCost = 0;
+	var cost = 0;
 	var MenuItemsBaby = [];
+	
 //document.addEventListener("deviceready", testit, false);
 	
 	
@@ -97,8 +99,9 @@
 	menuAPI.toggleInOut();
 	
 	document.addEventListener("scroll", menuAPI.showCheckOutMenu, false);
-	menuAPI.setEvents()
-		//}
+	
+
+	menuAPI.setEvents();
 	
 //alert("ok there yeassssss");
 </script>
