@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.josue45.boxlunchmenu" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.josue45.boxlunchmenu" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Box Lunch San Diego Menu</name>
     <description>
         Order online from our app
@@ -11,6 +11,16 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
+	
+	
+	<preference name="android-build-tool" value="gradle" />
+    <plugin name="phonegap-plugin-push" source="npm" spec="1.8.1">
+        <params>
+		<param name="SENDER_ID" value="291568499285" /> 
+    	</params>
+	</plugin>
+
+	
     <!--
 	<plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />

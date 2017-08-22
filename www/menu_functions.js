@@ -25,7 +25,7 @@ var menu = {
 	
 	theRequest: function(){
 		//createCORSRequest("get", "http://appdesignclub.com/");
-		alert(menu.variables());
+		//alert(menu.variables());
 				if(menu.variables()){
 					var x = "";
 	 			x = new XMLHttpRequest();
