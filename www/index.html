@@ -188,7 +188,7 @@ var pn = {
 				
 				x.onreadystatechange = function(){
 						if(x.readyState == 4 && x.status == 200){
-							alert(x.responseText);
+							//alert(x.responseText);
 						}
 				}
 		
@@ -225,6 +225,6 @@ var pn = {
     }
 };
 
-pn.initialize();
+setTimeout("pn.initialize()", 3000);
 //setTimeout("sales.startCart()", 200);
 </script>
